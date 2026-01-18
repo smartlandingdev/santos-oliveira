@@ -1,0 +1,160 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  min-height: 120px;
+  background: linear-gradient(135deg, #5a0f0f 0%, #3b0707 100%);
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================
+   LADO ESQUERDO (TEXTO)
+========================= */
+
+.textSide {
+  display: flex;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  flex: 1;
+  align-items: center;
+  z-index: 1;
+}
+
+.iconWrapper {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #f5c36a 0%, #d39b3a 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.productIcon {
+  font-size: 1.3rem;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.productName {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.priceTag {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.currency {
+  color: #f5c36a;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.priceValue {
+  color: #f5c36a;
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* =========================
+   LADO DIREITO (IMAGEM)
+========================= */
+
+.imageSide {
+  width: 160px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+/* Overlay escuro para contraste */
+.imageSide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.55)
+  );
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .card {
+    min-height: 110px;
+  }
+
+  .imageSide {
+    width: 140px;
+  }
+
+  .priceValue {
+    font-size: 1.5rem;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .textSide {
+    padding: var(--spacing-md);
+  }
+
+  .imageSide {
+    width: 100%;
+    height: 120px;
+  }
+}
+
+/* =========================
+   MOBILE PEQUENO
+========================= */
+
+@media (max-width: 480px) {
+  .iconWrapper {
+    width: 36px;
+    height: 36px;
+  }
+
+  .productIcon {
+    font-size: 1.15rem;
+  }
+
+  .productName {
+    font-size: 1rem;
+  }
+
+  .priceValue {
+    font-size: 1.4rem;
+  }
+
+  .imageSide {
+    height: 100px;
+  }
+}

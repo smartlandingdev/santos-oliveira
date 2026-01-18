@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd:*)",
+      "mcp__ide__getDiagnostics",
+      "Bash(npm run build:*)"
+    ]
+  }
+}
