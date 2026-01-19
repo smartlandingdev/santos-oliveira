@@ -4,14 +4,12 @@ interface ProductCardProps {
   name: string;
   price: number;
   icon?: string;
-  imageUrl: string;
 }
 
 export function ProductCard({
   name,
   price,
   icon = "🍗",
-  imageUrl,
 }: ProductCardProps) {
   return (
     <div className={styles.card}>
@@ -29,11 +27,6 @@ export function ProductCard({
           </div>
         </div>
       </div>
-
-      <div
-        className={styles.imageSide}
-        style={{ backgroundImage: `url(${imageUrl})` }}
-      />
     </div>
   );
 }

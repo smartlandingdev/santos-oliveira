@@ -15,17 +15,14 @@
   justify-content: space-between;
 }
 
-.logoPlaceholder {
+.logo {
   display: flex;
   align-items: center;
 }
 
-.logoText {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-gold);
-  font-style: italic;
+.logoImage {
+  height: 50px;
+  width: auto;
 }
 
 .nav {

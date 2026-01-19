@@ -1,10 +1,25 @@
 .footer {
-  background: linear-gradient(
-    135deg,
-    var(--color-maroon) 0%,
-    var(--color-maroon-dark) 100%
-  );
+  background: var(--color-maroon-dark);
   padding: var(--spacing-2xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../../assets/images/fumaca.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: color-burn;
 }
 
 .container {
@@ -15,12 +30,28 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .stars {
   display: flex;
-  gap: var(--spacing-xs);
+  align-items: center;
+  gap: var(--spacing-md);
   margin-bottom: var(--spacing-lg);
+}
+
+.stars::before,
+.stars::after {
+  content: '';
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-gold) 50%,
+    transparent 100%
+  );
 }
 
 .star {

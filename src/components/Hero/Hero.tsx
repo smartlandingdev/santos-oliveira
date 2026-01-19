@@ -7,8 +7,10 @@ export function Hero() {
         <div className={styles.content}>
           <h1 className={styles.title}>
             <span className={styles.titleWord}>Galeteria</span>
-            <span className={styles.titleAmpersand}>&</span>
-            <span className={styles.titleWord}>Marmitaria</span>
+            <span className={styles.titleLine}>
+              <span className={styles.titleAmpersand}>&</span>
+              <span className={styles.titleWord}>Marmitaria</span>
+            </span>
           </h1>
           <p className={styles.subtitle}>O melhor frango assado da cidade</p>
 

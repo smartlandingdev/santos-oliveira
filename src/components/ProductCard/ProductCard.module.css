@@ -5,7 +5,7 @@
   border-radius: var(--radius-lg);
   overflow: hidden;
   min-height: 120px;
-  background: linear-gradient(135deg, #5a0f0f 0%, #3b0707 100%);
+  background: var(--color-maroon-dark);
   box-shadow: var(--shadow-md);
 }
 
@@ -71,29 +71,6 @@
   line-height: 1;
 }
 
-/* =========================
-   LADO DIREITO (IMAGEM)
-========================= */
-
-.imageSide {
-  width: 160px;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  flex-shrink: 0;
-}
-
-/* Overlay escuro para contraste */
-.imageSide::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to left,
-    rgba(0, 0, 0, 0.15),
-    rgba(0, 0, 0, 0.55)
-  );
-}
 
 /* =========================
    TABLET
@@ -102,10 +79,6 @@
 @media (max-width: 992px) {
   .card {
     min-height: 110px;
-  }
-
-  .imageSide {
-    width: 140px;
   }
 
   .priceValue {
@@ -118,17 +91,8 @@
 ========================= */
 
 @media (max-width: 768px) {
-  .card {
-    flex-direction: column;
-  }
-
   .textSide {
     padding: var(--spacing-md);
-  }
-
-  .imageSide {
-    width: 100%;
-    height: 120px;
   }
 }
 
@@ -152,9 +116,5 @@
 
   .priceValue {
     font-size: 1.4rem;
-  }
-
-  .imageSide {
-    height: 100px;
   }
 }
